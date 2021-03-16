@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnNewNumbers = new System.Windows.Forms.Button();
             this.btnSortNumbers = new System.Windows.Forms.Button();
             this.btnNewHeroes = new System.Windows.Forms.Button();
@@ -56,6 +57,7 @@
             this.btnNewNumbers.TabIndex = 0;
             this.btnNewNumbers.Text = "New List";
             this.btnNewNumbers.UseVisualStyleBackColor = true;
+            this.btnNewNumbers.Click += new System.EventHandler(this.btnNewNumbers_Click);
             // 
             // btnSortNumbers
             // 
@@ -65,6 +67,7 @@
             this.btnSortNumbers.TabIndex = 1;
             this.btnSortNumbers.Text = "Sort";
             this.btnSortNumbers.UseVisualStyleBackColor = true;
+            this.btnSortNumbers.Click += new System.EventHandler(this.btnSortNumbers_Click);
             // 
             // btnNewHeroes
             // 
@@ -74,6 +77,7 @@
             this.btnNewHeroes.TabIndex = 2;
             this.btnNewHeroes.Text = "New List";
             this.btnNewHeroes.UseVisualStyleBackColor = true;
+            this.btnNewHeroes.Click += new System.EventHandler(this.btnNewHeroes_Click);
             // 
             // btnSortHeroes
             // 
@@ -83,6 +87,7 @@
             this.btnSortHeroes.TabIndex = 3;
             this.btnSortHeroes.Text = "Sort";
             this.btnSortHeroes.UseVisualStyleBackColor = true;
+            this.btnSortHeroes.Click += new System.EventHandler(this.btnSortHeroes_Click);
             // 
             // lblTitleN
             // 
@@ -138,6 +143,7 @@
             this.btnRemoveNumbers.TabIndex = 10;
             this.btnRemoveNumbers.Text = "Remove";
             this.btnRemoveNumbers.UseVisualStyleBackColor = true;
+            this.btnRemoveNumbers.Click += new System.EventHandler(this.btnRemoveNumbers_Click);
             // 
             // btnRemoveAllNumbers
             // 
@@ -147,6 +153,7 @@
             this.btnRemoveAllNumbers.TabIndex = 11;
             this.btnRemoveAllNumbers.Text = "Remove All";
             this.btnRemoveAllNumbers.UseVisualStyleBackColor = true;
+            this.btnRemoveAllNumbers.Click += new System.EventHandler(this.btnRemoveAllNumbers_Click);
             // 
             // txtAddHero
             // 
@@ -163,6 +170,7 @@
             this.btnAddHero.TabIndex = 13;
             this.btnAddHero.Text = "Add";
             this.btnAddHero.UseVisualStyleBackColor = true;
+            this.btnAddHero.Click += new System.EventHandler(this.btnAddHero_Click);
             // 
             // btnRemoveHero
             // 
@@ -172,6 +180,7 @@
             this.btnRemoveHero.TabIndex = 17;
             this.btnRemoveHero.Text = "Remove";
             this.btnRemoveHero.UseVisualStyleBackColor = true;
+            this.btnRemoveHero.Click += new System.EventHandler(this.btnRemoveHero_Click);
             // 
             // txtRemoveHero
             // 
@@ -202,11 +211,10 @@
             // 
             // lblStatus
             // 
-            this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(12, 396);
+            this.lblStatus.Location = new System.Drawing.Point(2, 337);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(85, 29);
+            this.lblStatus.Size = new System.Drawing.Size(298, 104);
             this.lblStatus.TabIndex = 20;
             this.lblStatus.Text = "Status:";
             // 
@@ -233,8 +241,10 @@
             this.Controls.Add(this.btnNewHeroes);
             this.Controls.Add(this.btnSortNumbers);
             this.Controls.Add(this.btnNewNumbers);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Using Lists within forms";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
